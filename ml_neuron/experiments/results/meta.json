@@ -1,0 +1,18 @@
+{
+  "seed": 42,
+  "n_train": 160,
+  "n_test": 40,
+  "features": [
+    "J_norm",
+    "mag_last",
+    "mag_mean",
+    "mag_std",
+    "mag_range",
+    "dw_position_norm"
+  ],
+  "poly_x_range": [
+    -4,
+    1.6312199831008911
+  ],
+  "timestamp": "2026-02-22T00:57:19"
+}
