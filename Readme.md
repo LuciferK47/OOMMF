@@ -99,11 +99,18 @@ flowchart LR
 ### Conductance mapping
 A bounded linear map is used in the extraction stage:
 
-$$ G_{raw} = G_{min} + (G_{max} - G_{min}) \cdot \text{clip}\left(\frac{x_{DW}}{L}, 0, 1\right) $$
+$$
+G_{\text{raw}} = G_{\text{min}} + (G_{\text{max}} - G_{\text{min}}) \cdot \text{clip}\left(\frac{x_{\text{DW}}}{L}, 0, 1\right)
+$$
 
 Optional circuit-level leaky behavior:
 
-$$ G = \begin{cases} G_{raw}, & J > 0 \\ \alpha G_{raw}, & J \le 0 \end{cases} $$
+$$
+G = \begin{cases} 
+G_{\text{raw}}, & \text{if } J > 0 \\\\ 
+\alpha G_{\text{raw}}, & \text{if } J \le 0 
+\end{cases}
+$$
 
 ## Quick Start
 
