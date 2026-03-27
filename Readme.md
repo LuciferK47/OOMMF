@@ -25,9 +25,7 @@ It runs OOMMF simulations, extracts domain-wall positions from OVF/OMF files, co
 ### Objective
 Build and validate a physically grounded neuron activation:
 
-\[
-J \;\rightarrow\; x_{DW}(J) \;\rightarrow\; G(x_{DW}) \;\rightarrow\; \hat{y}
-\]
+$$ J \rightarrow x_{DW}(J) \rightarrow G(x_{DW}) \rightarrow \hat{y} $$
 
 Where:
 - $J$ is spin current density
@@ -101,19 +99,11 @@ flowchart LR
 ### Conductance mapping
 A bounded linear map is used in the extraction stage:
 
-\[
-G_{raw} = G_{min} + (G_{max} - G_{min})\cdot \text{clip}\left(\frac{x_{DW}}{L}, 0, 1\right)
-\]
+$$ G_{raw} = G_{min} + (G_{max} - G_{min}) \cdot \text{clip}\left(\frac{x_{DW}}{L}, 0, 1\right) $$
 
 Optional circuit-level leaky behavior:
 
-\[
-G =
-\begin{cases}
-G_{raw}, & J > 0 \\
-\alpha G_{raw}, & J \le 0
-\end{cases}
-\]
+$$ G = \begin{cases} G_{raw}, & J > 0 \\ \alpha G_{raw}, & J \le 0 \end{cases} $$
 
 ## Quick Start
 
